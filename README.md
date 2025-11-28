@@ -1,2 +1,2 @@
 # Portafolio
-POrtafolio sobre mis habilidades como desarrollador
+Portafolio sobre mis habilidades como desarrollador

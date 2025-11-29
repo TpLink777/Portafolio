@@ -78,7 +78,7 @@ const Inicio = () => {
                                     <div className="absolute inset-0 bg-linear-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-full blur-2xl opacity-30"></div>
                                     <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl">
                                         <img
-                                            src="/img/Yo_v1.jpg"
+                                            src="/Yo_v1.jpg"
                                             alt="Foto de perfil"
                                             className="w-full h-full object-cover"
                                         />

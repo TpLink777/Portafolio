@@ -45,7 +45,7 @@ const Seccion1 = () => {
                                             <div className="absolute inset-0 bg-linear-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-2xl blur-xl opacity-30"></div>
                                             <div className="relative w-full h-full rounded-2xl overflow-hidden border-4 border-slate-800 shadow-2xl">
                                                 <img
-                                                    src="/img/Yo_v2.jpg"
+                                                    src="/Yo_v2.jpg"
                                                     alt="imagen personal"
                                                     className="w-full h-full object-cover"
                                                 />

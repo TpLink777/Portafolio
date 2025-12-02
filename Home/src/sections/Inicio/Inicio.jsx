@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
-import SimpleParallax from "simple-parallax-js";
+import DownloadModal from '../../components/ui/DownloadModal';
+
 
 const Inicio = () => {
+
+    const [open, setOpen] = useState(false);
+
     return (
         <>
             <div className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden pt-35 md:pt-15 lg:pt-12">
@@ -64,11 +68,16 @@ const Inicio = () => {
                                 </a>
                             </div>
                             <div className="pt-2">
-                                <button className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full font-semibold text-white shadow-md hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 flex items-center gap-3 outline-none focus:ring-4 focus:ring-cyan-300 relative overflow-hidden">
+
+                                <button className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full font-semibold text-white shadow-md hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 flex items-center gap-3 outline-none focus:ring-4 focus:ring-cyan-300 relative overflow-hidden cursor-pointer"
+                                onClick={() => setOpen(true)}>
                                     Descargar CV
                                     <ArrowRight size={20} className=" group-hover:translate-x-2 group-hover:scale-110 transition-transform duration-300 relative z-10" />
                                 </button>
+
+                                {open && <DownloadModal onClose={() => setOpen(false)} />}
                             </div>
+
                         </div>
                         <div className="flex justify-center order-1 md:order-2">
                             <div className="relative">

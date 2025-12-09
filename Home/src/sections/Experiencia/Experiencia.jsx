@@ -48,7 +48,7 @@ const Experiencia = () => {
                                     Análisis y Desarrollo de Software - SENA
                                 </p>
 
-                                <p className="text-slate-300 leading-relaxed text-base max-w-3xl">
+                                <p className="text-slate-300 leading-relaxed text-base max-w-3xl pr-5">
                                     Actualmente me encuentro en una etapa de formación intensiva donde he desarrollado
                                     múltiples proyectos que me han permitido consolidar habilidades técnicas y blandas
                                     fundamentales para el desarrollo de software profesional.
@@ -66,13 +66,13 @@ const Experiencia = () => {
                                     Desarrollo de Proyectos Formativos
                                 </h3>
 
-                                <p className="text-slate-300 leading-relaxed mb-6 text-base max-w-3xl">
+                                <p className="text-slate-300 leading-relaxed mb-6 text-base max-w-3xl pr-5">
                                     He liderado y participado en el desarrollo de aplicaciones web full-stack utilizando
                                     tecnologías modernas como React, Node.js, Express y bases de datos relacionales.
                                     Estos proyectos me han permitido:
                                 </p>
 
-                                <div className="grid md:grid-cols-2 gap-4 max-w-4xl">
+                                <div className="grid md:grid-cols-2 gap-4 max-w-4xl pr-5">
 
                                     <div className="flex items-start gap-3 p-4 rounded-lg bg-slate-900/30 border border-slate-800/40 hover:border-cyan-500/50 transition-all">
                                         <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 shrink-0"></div>
@@ -107,7 +107,7 @@ const Experiencia = () => {
                                     Colaboración y Trabajo en Equipo
                                 </h3>
 
-                                <p className="text-slate-300 leading-relaxed text-base max-w-3xl">
+                                <p className="text-slate-300 leading-relaxed text-base max-w-3xl pr-5">
                                     Experiencia trabajando en equipos multidisciplinarios utilizando metodologías ágiles,
                                     Git/GitHub y herramientas de gestión de proyectos. Desarrollé habilidades para comunicar
                                     ideas técnicas y contribuir efectivamente en entornos colaborativos.
@@ -119,7 +119,7 @@ const Experiencia = () => {
 
 
                 <div className="mt-16 p-6 rounded-2xl bg-linear-to-r from-cyan-400/10 via-blue-500/10 to-purple-600/10 border border-cyan-400/20 backdrop-blur-sm">
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-8">
                         <div className="w-12 h-12 rounded-full bg-linear-to-br from-cyan-500 to-blue-600 flex items-center justify-center shrink-0">
                             <Rocket size={24} className="text-white" />
                         </div>

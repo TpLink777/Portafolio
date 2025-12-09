@@ -17,7 +17,7 @@ const Seccion1 = () => {
 
 
                         <div className="text-center space-y-4">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-full">
+                            <div className="inline-flex items-center gap-2 mt-10 px-4 py-2 bg-linear-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-full">
                                 <span className="text-cyan-400 text-sm font-medium">
                                     Sobre mí
                                 </span>

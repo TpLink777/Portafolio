@@ -24,7 +24,7 @@ const Proyectos = () => {
             <div className='max-w-7xl mx-auto w-full relative z-10'>
 
                 <div className="text-center space-y-6 mb-20">
-                    <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-linear-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-full hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm">
+                    <div className="inline-flex items-center gap-2 mt-10 px-5 py-2.5 bg-linear-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-full hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm">
                         <Code2 size={18} className="text-cyan-400" />
                         <span className="text-cyan-400 text-sm font-semibold tracking-wide">Mi Trabajo</span>
                     </div>
@@ -88,7 +88,7 @@ const Proyectos = () => {
                                             ))}
                                         </div>
 
-                                        <div className="flex gap-4 pt-6">
+                                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
                                             <a
                                                 href={proyecto.repositorio}
                                                 onClick={(e) => e.stopPropagation()}

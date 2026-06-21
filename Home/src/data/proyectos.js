@@ -2,9 +2,9 @@
 export const proyectos = [
     {
         id: 1,
-        titulo: "Fast Request Leanding Page",
-        descripcion: `Proyectoto Formativo - Landing page desarrollada con el objetivo de crear una página de presentación del proyecto, 
-        en donde se muestra la información principal y características del mismo, ademas en donde las empresas o clientes se podrian cominicar 
+        titulo: "Fast Request Landing Page",
+        descripcion: `Proyecto Formativo - Landing page desarrollada con el objetivo de crear una página de presentación del proyecto, 
+        en donde se muestra la información principal y características del mismo, además en donde las empresas o clientes se podrían comunicar 
         con nosotros.`,
         imagen: [
             "/fast-request/fast_v1.png", "/fast-request/fast_v2.png", "/fast-request/fast_v3.png",
@@ -20,11 +20,11 @@ export const proyectos = [
     {
         id: 2,
         titulo: "Fast Request - Plataforma Completa",
-        descripcion: `Proyectoto Formativo - Participé en este proyecto formativo, 
-        cuyo objetivo principal fue desarrollar una aplicación full-stack para la gestión de pedidos de comida rápida, 
+        descripcion: `Proyecto Formativo - Participé en este proyecto formativo, 
+        cuyo objetivo principal fue desarrollar una aplicación full-stack para la gestión de pedidos de comida rápida. 
         En este proyecto trabajé en el desarrollo del frontend y del backend, así como en la gestión de una base de datos relacional, 
         utilizando tecnologías modernas.
-        En dicho proyecto construi componentes como:  hacer pedidos, clientes, pedidos, estadsticas, visualizacion de los mensajes de los clientes.... etc `,
+        En dicho proyecto construí componentes como: hacer pedidos, clientes, pedidos, estadísticas, visualización de los mensajes de los clientes, entre otros.`,
         
         imagen: [
             "/fast-completo/fast_c1.png", "/fast-completo/fast_c2.png", "/fast-completo/fast_c3.png",
@@ -42,8 +42,8 @@ export const proyectos = [
     },
     {
         id: 3,
-        titulo: "Analizardor de Codigo con AI",
-        descripcion: `Proyecto personal - Aplicación web donde los usuarios pueden ingresar código JavaScript y 
+        titulo: "Analizador de Código con AI",
+        descripcion: `Proyecto Personal - Aplicación web donde los usuarios pueden ingresar código JavaScript y 
         recibir retroalimentación automática sobre errores y sugerencias de mejora, usando inteligencia artificial.`,
         imagen: [
             "/bot/bot_b1.png", "/bot/bot_b2.png", "/bot/bot_b3.png",

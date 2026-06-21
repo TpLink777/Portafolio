@@ -1,14 +1,19 @@
 import { useCallback } from "react";
 
 export const useWhatsApp = () => {
-    const openWhatsApp = useCallback(() => {
+    const openWhatsApp = useCallback((name = "", customMessage = "") => {
         const telefono = "573234447475";
-        const mensaje = `Hola, estoy interesado en ti. Me gustaría contactarme contigo para conocerte mas. Muchas gracias.`; 
+        
+        let mensaje = "";
+        if (name && customMessage) {
+            mensaje = `Hola Stiven, soy ${name}. \n\n${customMessage}`;
+        } else {
+            mensaje = `Hola Stiven, me interesa tu perfil y me gustaría contactarme contigo para conocerte más.`; 
+        }
+
         const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
         window.open(url, "_blank");
     }, []);
 
     return { openWhatsApp };
 };
-
-

@@ -76,9 +76,9 @@ const Seccion1 = () => {
                                             Un poco sobre mí!
                                         </h2>
                                         <p className='text-zinc-300 text-base sm:text-lg md:text-xl leading-relaxed'>
-                                            Mi nombre es Stiven Gomez Mazo,
-                                            actualmente soy un estudiante de análisis y desarrollo de software
-                                            apasionado por construir ideas increíbles, y plasmar problemas en soluciones impecables.
+                                            Mi nombre es Stiven Gómez Mazo. Soy tecnólogo en Análisis y Desarrollo de Software,
+                                            apasionado por construir soluciones a partir de ideas y convertir problemas complejos en sistemas eficientes,
+                                            bien diseñados y funcionales. Disfruto aprender constantemente y aplicar ese conocimiento en proyectos reales que generen valor.
                                         </p>
                                     </div>
                                 </div>

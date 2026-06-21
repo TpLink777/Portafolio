@@ -87,7 +87,7 @@ const Seccion2 = () => {
                                                 </div>
                                             </div>
                                             <h4 className="text-2xl font-bold text-white group-hover:text-teal-400 transition-colors duration-500">
-                                                Consolidar mis estudios
+                                                Conseguir un empleo estable
                                             </h4>
                                             <div className="h-1 w-0 bg-linear-to-r from-teal-400 to-teal-600 rounded-full group-hover:w-full transition-all duration-700"></div>
                                         </div>

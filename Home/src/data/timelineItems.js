@@ -30,4 +30,9 @@ export const timelineItems = [
         cardTitle: 'Consolidación',
         cardDetailedText: 'Espero completar mi formación y empezar a trabajar en proyectos reales de gran impacto.',
     },
+    {
+        title: '2026 - 2027',
+        cardTitle: 'Encontrando mi camino en el mundo laboral',
+        cardDetailedText: 'Continuara...',
+    },
 ];

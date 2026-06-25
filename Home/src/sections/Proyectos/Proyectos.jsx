@@ -81,7 +81,7 @@ const Proyectos = () => {
                                     setSelectedProject(proyecto.id);
                                 }}
                             >
-                                <div className={`absolute -inset-1 bg-linear-to-r ${colors.glow} rounded-3xl blur-lg opacity-0 group-hover:opacity-40 transition-all duration-700`}/>
+                                <div className={`absolute -inset-1 bg-linear-to-r ${colors.glow} rounded-3xl blur-lg opacity-0 group-hover:opacity-40 transition-all duration-700`} />
 
                                 <div className={`relative flex flex-col h-full bg-zinc-900/60 backdrop-blur-xl border border-zinc-800/80 group-hover:${colors.border} rounded-3xl overflow-hidden group-hover:-tranzinc-y-2 transition-all duration-500 hover:shadow-2xl ${colors.shadow}`}>
 
@@ -123,7 +123,7 @@ const Proyectos = () => {
                                         <h3 className={`text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:to-teal-500 transition-all duration-300`}>
                                             {proyecto.titulo}
                                         </h3>
-                                        
+
                                         <p className="text-zinc-400 text-sm line-clamp-3 mb-6 flex-grow">
                                             {proyecto.descripcion}
                                         </p>
@@ -142,7 +142,7 @@ const Proyectos = () => {
 
             {/* Project Details Modal */}
             {selectedProject && (
-                <div 
+                <div
                     className="fixed inset-0 z-[1000] flex items-center justify-center bg-zinc-950/90 backdrop-blur-md p-4 animate-fade-in"
                     onClick={() => setSelectedProject(null)}
                 >
@@ -150,7 +150,7 @@ const Proyectos = () => {
                         .filter((p) => p.id === selectedProject)
                         .map((proyecto) => {
                             const colors = data.getColorClasses(proyecto.color);
-                            
+
                             return (
                                 <div
                                     key={proyecto.id}
@@ -168,7 +168,7 @@ const Proyectos = () => {
                                         <h3 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mb-6 pr-8">
                                             {proyecto.titulo}
                                         </h3>
-                                        
+
                                         <div className="mb-8 rounded-2xl overflow-hidden border border-zinc-700/50 bg-zinc-950">
                                             <Swiper
                                                 modules={[Pagination, Autoplay]}

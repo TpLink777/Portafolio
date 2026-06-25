@@ -1,25 +1,37 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { ArrowRight, Github, Linkedin, Mail, Code2, Database, Layout } from 'lucide-react';
 import DownloadModal from '../../components/ui/DownloadModal';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
 
 const Inicio = () => {
     const [open, setOpen] = useState(false);
-    const [text, setText] = useState('');
+    const container = useRef();
+    const textRef = useRef();
+    const email = "stivengomezmazo7@gmail.com";
+    const subject = "Oferta de trabajo";
+    const body = "Hola Stiven, vi tu portafolio y quisiera hablar contigo.";
+
+    gsap.registerPlugin(useGSAP, ScrambleTextPlugin);
+
     const fullText = "Desarrollador Full Stack";
 
-    useEffect(() => {
-        let currentIndex = 0;
-        const intervalId = setInterval(() => {
-            if (currentIndex <= fullText.length) {
-                setText(fullText.slice(0, currentIndex));
-                currentIndex++;
-            } else {
-                clearInterval(intervalId);
+    useGSAP(() => {
+        gsap.to(textRef.current, {
+            duration: 1.5,
+            repeat: -1,
+            repeatDelay: 2.5,
+            yoyo: true,
+            scrambleText: {
+                text: fullText,
+                revealDelay: 0.3,
+                speed: 0.3,
+                chars: "01011001010101--_X#",
             }
-        }, 100);
+        })
+    }, { scope: container })
 
-        return () => clearInterval(intervalId);
-    }, []);
 
     return (
         <>
@@ -34,7 +46,7 @@ const Inicio = () => {
                 <div className="max-w-7xl mx-auto w-full relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8 order-2 lg:order-1 text-center lg:text-left">
-                            <div className="space-y-4">
+                            <div ref={container} className="space-y-4">
                                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900/80 border border-zinc-700 rounded-full animate-fade-in-up backdrop-blur-sm">
                                     <span className="relative flex h-3 w-3">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -54,7 +66,7 @@ const Inicio = () => {
                                 </h1>
 
                                 <h2 className="text-xl sm:text-2xl text-emerald-400 font-mono font-medium h-8 animate-fade-in-up delay-200">
-                                    <span className="typing-cursor">{text}</span>
+                                    <span ref={textRef} className="typing-cursor">{fullText}</span>
                                 </h2>
                             </div>
 
@@ -74,7 +86,7 @@ const Inicio = () => {
                                     <Github size={22} />
                                 </a>
                                 <a
-                                    href="https://www.linkedin.com/in/stiven-g%C3%B3mez-9b73a5261/"
+                                    href="https://www.linkedin.com/in/stiven-gomez-mazo/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-800/80 border border-zinc-700 text-zinc-400 hover:bg-emerald-500/20 hover:text-emerald-400 hover:border-emerald-500/50 transition-all duration-300 hover:-tranzinc-y-1 hover:shadow-lg shadow-emerald-500/20"
@@ -82,7 +94,7 @@ const Inicio = () => {
                                     <Linkedin size={22} />
                                 </a>
                                 <a
-                                    href="mailto:stivengomezmazo7@gmail.com"
+                                    href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
                                     className="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-800/80 border border-zinc-700 text-zinc-400 hover:bg-emerald-500/20 hover:text-emerald-400 hover:border-emerald-500/50 transition-all duration-300 hover:-tranzinc-y-1 hover:shadow-lg shadow-emerald-500/20"
                                 >
                                     <Mail size={22} />
@@ -96,21 +108,21 @@ const Inicio = () => {
                                     <ArrowRight size={20} className="group-hover:tranzinc-x-1 transition-transform duration-300 relative z-10" />
                                     <div className="absolute inset-0 bg-linear-to-r from-teal-600 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </button>
-                                
+
                             </div>
-                            
+
                             <div className="grid grid-cols-3 gap-4 pt-8 border-t border-zinc-800/50 animate-fade-in-up delay-600 mt-8">
                                 <div className="text-center lg:text-left">
                                     <div className="text-3xl font-bold text-white mb-1">3+</div>
-                                    <div className="text-sm text-zinc-400 font-medium">Proyectos<br/>Completados</div>
+                                    <div className="text-sm text-zinc-400 font-medium">Proyectos<br />Completados</div>
                                 </div>
                                 <div className="text-center lg:text-left">
                                     <div className="text-3xl font-bold text-emerald-400 mb-1">9+</div>
-                                    <div className="text-sm text-zinc-400 font-medium">Tecnologías<br/>Dominadas</div>
+                                    <div className="text-sm text-zinc-400 font-medium">Tecnologías<br />Dominadas</div>
                                 </div>
                                 <div className="text-center lg:text-left">
                                     <div className="text-3xl font-bold text-emerald-400 mb-1">100%</div>
-                                    <div className="text-sm text-zinc-400 font-medium">Compromiso &<br/>Dedicación</div>
+                                    <div className="text-sm text-zinc-400 font-medium">Compromiso &<br />Dedicación</div>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +132,7 @@ const Inicio = () => {
                                 <div className="absolute -inset-1 rounded-full bg-linear-to-r from-emerald-400 via-teal-500 to-emerald-600 opacity-30 group-hover:opacity-60 blur-xl transition-opacity duration-700 animate-pulse-glow"></div>
                                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px]">
                                     <div className="absolute inset-0 rounded-full border-2 border-zinc-700/50 group-hover:border-emerald-500/50 transition-colors duration-500"></div>
-                                    
+
 
                                     <div className="absolute top-10 -left-6 z-20 p-3 rounded-2xl bg-zinc-900/90 border border-zinc-700 shadow-xl backdrop-blur-md animate-float" style={{ animationDelay: '0s' }}>
                                         <Code2 className="text-emerald-400" size={24} />
@@ -131,7 +143,7 @@ const Inicio = () => {
                                     <div className="absolute -top-4 right-12 z-20 p-3 rounded-2xl bg-zinc-900/90 border border-zinc-700 shadow-xl backdrop-blur-md animate-float" style={{ animationDelay: '-4s' }}>
                                         <Layout className="text-teal-400" size={24} />
                                     </div>
-                                    
+
                                     <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-zinc-900 shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500">
                                         <img
                                             src="/Yo_v1.jpg"

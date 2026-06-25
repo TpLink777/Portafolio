@@ -15,8 +15,8 @@ const DownloadModal = ({ onClose }) => {
     const downloadFile = (type) => {
         const url =
             type === "markdown"
-                ? "/Cv/Hoja_De_Vida_MarkDown.pdf"
-                : "/Cv/Hoja_De_Vida.pdf";
+                ? "/Cv/HojaDeVidaMarkDown.pdf"
+                : "/Cv/HojaDeVida.pdf";
 
         const link = document.createElement("a");
         link.href = url;
@@ -30,7 +30,7 @@ const DownloadModal = ({ onClose }) => {
 
     return createPortal(
         (
-            <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-zinc-950/80 backdrop-blur-md p-4 animate-fade-in" onClick={onClose}>
+            <div className="fixed inset-0 z-1000 flex items-center justify-center bg-zinc-950/80 backdrop-blur-md p-4 animate-fade-in" onClick={onClose}>
                 <div
                     className="bg-linear-to-br from-zinc-900 via-zinc-800 to-zinc-900 rounded-3xl shadow-2xl shadow-black/50 w-full max-w-lg p-8 border border-zinc-700/50 relative overflow-hidden animate-scale-in"
                     onClick={(e) => e.stopPropagation()}

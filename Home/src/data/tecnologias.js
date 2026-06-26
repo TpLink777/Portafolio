@@ -14,7 +14,7 @@ import {
     SiCss,
     SiExpress,
     SiTypescript,
-    SiNextjs,
+    Nextdotjs ,
     SiSupabase
 } from '@icons-pack/react-simple-icons';
 
@@ -22,7 +22,7 @@ export const tecnologias = [
     { nombre: 'React', porcentaje: 75, icon: SiReact },
     { nombre: 'JavaScript', porcentaje: 80, icon: SiJavascript },
     { nombre: 'TypeScript', porcentaje: 75, icon: SiTypescript },
-    { nombre: 'Next.js', porcentaje: 50, icon: SiNextjs },
+    { nombre: 'Next.js', porcentaje: 50, icon: Nextdotjs },
     { nombre: 'Tailwind CSS', porcentaje: 80, icon: SiTailwindcss },
     { nombre: 'Material UI', porcentaje: 70, icon: SiMui },
     { nombre: 'Node.js', porcentaje: 88, icon: SiNodedotjs },

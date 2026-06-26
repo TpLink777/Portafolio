@@ -1,5 +1,5 @@
 
-import { Puzzle, Users, BookOpen, Briefcase, MessageSquare, Lightbulb, RefreshCcw, Cpu, Crown } from 'lucide-react';
+import { Puzzle, Users, BookOpen, Briefcase, MessageSquare, Lightbulb, RefreshCcw, Cpu, Crown, Rocket } from 'lucide-react';
 
 export const habilidades = [
     { nombre: 'Resolución de Problemas', porcentaje: 90, color: 'from-emerald-500 to-teal-600', icon: Puzzle },
@@ -10,5 +10,6 @@ export const habilidades = [
     { nombre: 'Creatividad e Innovación', porcentaje: 90, color: 'from-emerald-400 to-teal-500', icon: Lightbulb },
     { nombre: 'Adaptabilidad', porcentaje: 93, color: 'from-teal-500 to-emerald-600', icon: RefreshCcw },
     { nombre: 'Adaptación Tecnológica', porcentaje: 91, color: 'from-teal-500 to-teal-500', icon: Cpu },
-    { nombre: 'Liderazgo Colaborativo', porcentaje: 82, color: 'from-emerald-600 to-emerald-500', icon: Crown }
+    { nombre: 'Liderazgo Colaborativo', porcentaje: 82, color: 'from-emerald-600 to-emerald-500', icon: Crown },
+    { nombre: 'Scrum', porcentaje: 80, color: 'from-emerald-600 to-emerald-500', icon: Rocket }
 ];

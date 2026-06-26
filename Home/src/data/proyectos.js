@@ -13,7 +13,7 @@ export const proyectos = [
         ],
         tecnologias: ["Node.js", "Express.js", "Handlebars.js", "CSS3", "HTML5"],
         repositorio: "https://github.com/TpLink777/Project-Fast-Request",
-        demo: "https://project-fast-request-production.up.railway.app/",
+        demo: "https://project-fast-request.vercel.app/",
         color: "cyan"
     },
 
@@ -25,7 +25,7 @@ export const proyectos = [
         En este proyecto trabajé en el desarrollo del frontend y del backend, así como en la gestión de una base de datos relacional, 
         utilizando tecnologías modernas.
         En dicho proyecto construí componentes como: hacer pedidos, clientes, pedidos, estadísticas, visualización de los mensajes de los clientes, entre otros.`,
-        
+
         imagen: [
             "/fast-completo/fast_c1.png", "/fast-completo/fast_c2.png", "/fast-completo/fast_c3.png",
             "/fast-completo/fast_c4.png", "/fast-completo/fast_c5.png", "/fast-completo/fast_c6.png",
@@ -43,7 +43,7 @@ export const proyectos = [
     {
         id: 3,
         titulo: "Analizador de Código con AI",
-        descripcion: `Proyecto Personal - Aplicación web donde los usuarios pueden ingresar código JavaScript y 
+        descripcion: `Proyecto Personal - Aplicación web donde los usuarios pueden ingresar código JavaScript y
         recibir retroalimentación automática sobre errores y sugerencias de mejora, usando inteligencia artificial.`,
         imagen: [
             "/bot/bot_b1.png", "/bot/bot_b2.png", "/bot/bot_b3.png",
@@ -51,6 +51,26 @@ export const proyectos = [
         tecnologias: ["Node.js", "Express.js", "React", "Vite", "CSS3", "HTML5"],
         repositorio: "https://github.com/TpLink777/Analizador-De-Codigo",
         demo: "https://analizador-de-codigo.onrender.com",
+        color: "purple"
+    },
+    {
+        id: 4,
+        titulo: "NoteAI",
+        descripcion: `Aplicación web full stack de gestión de tareas con autenticación segura mediante OAuth 2.0 con
+                Google, sistema de roles y control de acceso por permisos. Integra un modelo de IA que genera
+                automáticamente descripciones sugeridas a partir del título de cada nota y permite mejorar
+                descripciones existentes con un solo clic, elevando la experiencia más allá de un simple to-do list.
+                `,
+        imagen: [
+            "/noteAI/note_v1.png", "/noteAI/note_v2.png", "/noteAI/note_v3.png", "/noteAI/note_v4.png", "/noteAI/note_v5.png",
+            "/noteAI/note_v6.png", "/noteAI/note_v7.png", "/noteAI/note_v8.png", "/noteAI/note_v9.png", "/noteAI/note_v10.png",
+            "/noteAI/note_v11.png", "/noteAI/note_v12.png",
+        ],
+        tecnologias: ["Laravel", "Brazee", "Eloquent", "Vite", "CSS3", "HTML5", "Alpine.js", "TailwindCSS", "SupaBase",
+            "OAuth 2.0 (Google)", "Hugginsface API", "Ollama API", "PHP"
+        ],
+        repositorio: "https://github.com/TpLink777/NoteAI",
+        demo: "https://noteai-production-2ca3.up.railway.app/",
         color: "purple"
     },
 ];

@@ -143,7 +143,7 @@ const Skills = () => {
 
                                             <div className="relative h-2.5 bg-zinc-900/80 rounded-full overflow-hidden shadow-inner border border-zinc-800">
                                                 <div
-                                                    className={`absolute top-0 left-0 bottom-0 bg-linear-to-r ${tech.color} rounded-full transition-all duration-[1500ms] ease-out flex justify-end`}
+                                                    className={`absolute top-0 left-0 bottom-0 bg-linear-to-r ${tech.color} rounded-full transition-all duration-1500 ease-out flex justify-end`}
                                                     style={{ width: isVisible ? `${tech.porcentaje}%` : '0%' }}
                                                 >
                                                     <div className="w-4 h-full bg-white/20 blur-[2px]"></div>

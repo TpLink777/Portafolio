@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
+/* ===== Color System ===== */
+:root {
+    --navy-deep: #0B132B;
+    --navy-mid: #1C2541;
+    --navy-light: #3A506B;
+    --cyan-accent: #5BC0BE;
+    --cyan-bright: #6FFFE9;
+}
+
 /* ===== Typography ===== */
 body {
     font-family: "Inter", system-ui, -apple-system, sans-serif;
-    background-color: #050505;
+    background-color: var(--navy-deep);
     color: #e4e4e7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,7 +32,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #050505;
+    background: #0B132B;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -32,7 +41,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #10b981; /* emerald-500 */
+    background: #5BC0BE; /* color4 */
 }
 
 /* ===== Keyframe Animations ===== */
@@ -103,7 +112,7 @@ html {
 
 @keyframes typing-cursor {
     0%, 100% {
-        border-color: #10b981; /* emerald */
+        border-color: #5BC0BE; /* color4 */
     }
     50% {
         border-color: transparent;
@@ -186,21 +195,77 @@ html {
 /* ===== Glass Effect Cleaned ===== */
 /* Removing heavy blur effects for a sharper, terminal-like feel */
 .glass {
-    background: rgba(9, 9, 11, 0.8); /* zinc-950 */
-    border: 1px solid rgba(39, 39, 42, 0.5); /* zinc-800 */
+    background: rgba(11, 19, 43, 0.8);
+    border: 1px solid rgba(39, 39, 42, 0.5);
 }
 
 /* ===== Typing Cursor ===== */
 .typing-cursor::after {
     content: "_";
     animation: typing-cursor 1s step-end infinite;
-    color: #10b981;
+    color: #5BC0BE;
     font-weight: 700;
     margin-left: 2px;
 }
 
 /* ===== Terminal Text Selection ===== */
 ::selection {
-    background: #10b981;
-    color: #050505;
+    background: #5BC0BE;
+    color: #0B132B;
 }
+
+/* ===== Custom Color System Classes ===== */
+/* Text colors */
+.text-cyan-accent { color: var(--cyan-accent); }
+.text-navy-light { color: var(--navy-light); }
+
+/* Background colors */
+.bg-cyan-accent { background-color: var(--cyan-accent); }
+.bg-navy-light { background-color: var(--navy-light); }
+
+/* Opacity backgrounds */
+.bg-cyan-accent\/5 { background-color: rgba(91, 192, 190, 0.05); }
+.bg-cyan-accent\/10 { background-color: rgba(91, 192, 190, 0.1); }
+.bg-cyan-accent\/20 { background-color: rgba(91, 192, 190, 0.2); }
+.bg-cyan-accent\/30 { background-color: rgba(91, 192, 190, 0.3); }
+.bg-cyan-accent\/40 { background-color: rgba(91, 192, 190, 0.4); }
+.bg-cyan-accent\/50 { background-color: rgba(91, 192, 190, 0.5); }
+.bg-cyan-accent\/60 { background-color: rgba(91, 192, 190, 0.6); }
+.bg-cyan-accent\/80 { background-color: rgba(91, 192, 190, 0.8); }
+.bg-navy-light\/50 { background-color: rgba(58, 80, 107, 0.5); }
+
+/* Border colors */
+.border-cyan-accent\/20 { border-color: rgba(91, 192, 190, 0.2); }
+.border-cyan-accent\/30 { border-color: rgba(91, 192, 190, 0.3); }
+.border-cyan-accent\/40 { border-color: rgba(91, 192, 190, 0.4); }
+.border-cyan-accent\/50 { border-color: rgba(91, 192, 190, 0.5); }
+.border-cyan-accent\/60 { border-color: rgba(91, 192, 190, 0.6); }
+
+/* Hover states */
+.hover\:text-cyan-accent:hover { color: var(--cyan-accent); }
+.hover\:bg-cyan-accent\/10:hover { background-color: rgba(91, 192, 190, 0.1); }
+.hover\:bg-cyan-accent\/20:hover { background-color: rgba(91, 192, 190, 0.2); }
+.hover\:bg-cyan-accent\/50:hover { background-color: rgba(91, 192, 190, 0.5); }
+.hover\:border-cyan-accent\/30:hover { border-color: rgba(91, 192, 190, 0.3); }
+.hover\:border-cyan-accent\/50:hover { border-color: rgba(91, 192, 190, 0.5); }
+.hover\:border-cyan-accent\/60:hover { border-color: rgba(91, 192, 190, 0.6); }
+
+/* Gradient colors */
+.from-cyan-accent { --tw-gradient-from: rgba(91,192,190,1); }
+.from-cyan-accent\/10 { --tw-gradient-from: rgba(91,192,190,0.1); }
+.from-cyan-accent\/50 { --tw-gradient-from: rgba(91,192,190,0.5); }
+.via-cyan-accent { --tw-gradient-to: rgba(91,192,190,1); }
+.via-cyan-accent\/50 { --tw-gradient-to: rgba(91,192,190,0.5); }
+.to-cyan-accent { --tw-gradient-to: rgba(91,192,190,1); }
+.to-cyan-accent\/50 { --tw-gradient-to: rgba(91,192,190,0.5); }
+.to-navy-light { --tw-gradient-to: #3A506B; }
+.to-navy-light\/10 { --tw-gradient-to: rgba(58,80,107,0.1); }
+.from-navy-light { --tw-gradient-from: #3A506B; }
+
+/* Shadow colors */
+.shadow-cyan-accent\/10 { --tw-shadow-color: rgba(91, 192, 190, 0.1); }
+.shadow-cyan-accent\/20 { --tw-shadow-color: rgba(91, 192, 190, 0.2); }
+.shadow-cyan-accent\/25 { --tw-shadow-color: rgba(91, 192, 190, 0.25); }
+.shadow-cyan-accent\/30 { --tw-shadow-color: rgba(91, 192, 190, 0.3); }
+.shadow-cyan-accent\/40 { --tw-shadow-color: rgba(91, 192, 190, 0.4); }
+.shadow-cyan-accent\/50 { --tw-shadow-color: rgba(91, 192, 190, 0.5); }

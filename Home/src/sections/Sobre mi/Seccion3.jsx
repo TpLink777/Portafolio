@@ -28,9 +28,9 @@ const Seccion3 = () => {
         <section className='min-h-screen flex items-center justify-center px-6 relative overflow-hidden py-24' ref={sectionRef}>
 
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 right-10 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl"></div>
-                <div className="absolute top-1/2 left-1/2 transform -tranzinc-x-1/2 -tranzinc-y-1/2 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl"></div>
+                <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-accent/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-accent/5 rounded-full blur-3xl"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-accent/5 rounded-full blur-3xl"></div>
             </div>
 
             <div className='max-w-7xl mx-auto w-full relative z-10'>
@@ -38,12 +38,12 @@ const Seccion3 = () => {
 
                     <div className={`text-center space-y-6 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
                         <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-zinc-900/80 border border-zinc-700/50 rounded-full shadow-lg shadow-black/20 backdrop-blur-sm">
-                            <Clock size={16} className="text-emerald-400" />
-                            <span className="text-emerald-400 text-sm font-semibold tracking-wide">Mi Recorrido</span>
+                            <Clock size={16} className="text-cyan-accent" />
+                            <span className="text-cyan-accent text-sm font-semibold tracking-wide">Mi Recorrido</span>
                         </div>
 
                         <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight'>
-                            Timeline de mi <span className="bg-linear-to-r from-emerald-400 via-teal-500 to-emerald-600 bg-clip-text text-transparent">aprendizaje</span>
+                            Timeline de mi <span className="bg-linear-to-r from-cyan-accent via-cyan-accent to-navy-light bg-clip-text text-transparent">aprendizaje</span>
                         </h2>
 
                         <p className='text-zinc-400 text-lg max-w-2xl mx-auto'>
@@ -54,13 +54,13 @@ const Seccion3 = () => {
 
                     <div className="relative w-full max-w-5xl mt-12">
                         {/* Center line for desktop, left line for mobile */}
-                        <div className={`absolute left-8 md:left-12 lg:left-1/2 lg:-tranzinc-x-1/2 w-1 h-full bg-linear-to-b from-emerald-500/50 via-teal-500/50 to-emerald-500/50 rounded-full ${isVisible ? 'animate-fade-in delay-300' : 'opacity-0'}`}></div>
+                        <div className={`absolute left-8 md:left-12 lg:left-1/2 lg:-translate-x-1/2 w-1 h-full bg-linear-to-b from-cyan-accent/50 via-cyan-accent/50 to-cyan-accent/50 rounded-full ${isVisible ? 'animate-fade-in delay-300' : 'opacity-0'}`}></div>
 
                         {data.timelineItems.map((item, index) => {
                             const colors = [
-                                { bg: 'from-emerald-500/10 to-emerald-600/10', border: 'border-emerald-500/30', hover: 'hover:border-emerald-500/60', shadow: 'hover:shadow-emerald-500/20', text: 'text-emerald-400', dot: 'bg-emerald-500', glow: 'from-emerald-400 via-emerald-500 to-emerald-400', line: 'from-emerald-400 to-emerald-600' },
-                                { bg: 'from-teal-500/10 to-teal-600/10', border: 'border-teal-500/30', hover: 'hover:border-teal-500/60', shadow: 'hover:shadow-teal-500/20', text: 'text-teal-400', dot: 'bg-teal-500', glow: 'from-teal-400 via-teal-500 to-teal-400', line: 'from-teal-400 to-teal-600' },
-                                { bg: 'from-emerald-500/10 to-emerald-600/10', border: 'border-emerald-500/30', hover: 'hover:border-emerald-500/60', shadow: 'hover:shadow-emerald-500/20', text: 'text-emerald-400', dot: 'bg-emerald-500', glow: 'from-emerald-400 via-emerald-500 to-emerald-400', line: 'from-emerald-400 to-emerald-600' }
+                                { bg: 'from-cyan-accent/10 to-navy-light/10', border: 'border-cyan-accent/30', hover: 'hover:border-cyan-accent/60', shadow: 'hover:shadow-cyan-accent/20', text: 'text-cyan-accent', dot: 'bg-cyan-accent', glow: 'from-cyan-accent via-cyan-accent to-cyan-accent', line: 'from-cyan-accent to-navy-light' },
+                                { bg: 'from-cyan-accent/10 to-navy-light/10', border: 'border-cyan-accent/30', hover: 'hover:border-cyan-accent/60', shadow: 'hover:shadow-cyan-accent/20', text: 'text-cyan-accent', dot: 'bg-cyan-accent', glow: 'from-cyan-accent via-cyan-accent to-cyan-accent', line: 'from-cyan-accent to-navy-light' },
+                                { bg: 'from-cyan-accent/10 to-navy-light/10', border: 'border-cyan-accent/30', hover: 'hover:border-cyan-accent/60', shadow: 'hover:shadow-cyan-accent/20', text: 'text-cyan-accent', dot: 'bg-cyan-accent', glow: 'from-cyan-accent via-cyan-accent to-cyan-accent', line: 'from-cyan-accent to-navy-light' }
                             ];
                             const color = colors[index % 3];
                             const isEven = index % 2 === 0;
@@ -69,7 +69,7 @@ const Seccion3 = () => {
                                 <div key={index} className={`relative flex flex-col lg:flex-row items-start lg:items-center mb-16 ${isEven ? 'lg:flex-row-reverse' : ''} ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: `${300 + (index * 150)}ms` }}>
                                     
                                     {/* Timeline Dot */}
-                                    <div className="absolute left-8 md:left-12 lg:left-1/2 transform -tranzinc-x-1/2 z-20 flex items-center justify-center mt-6 lg:mt-0">
+                                    <div className="absolute left-8 md:left-12 lg:left-1/2 transform -translate-x-1/2 z-20 flex items-center justify-center mt-6 lg:mt-0">
                                         <div className="relative">
                                             <div className={`absolute inset-0 ${color.dot} rounded-full blur-md opacity-50 animate-pulse`}></div>
                                             <div className={`relative w-6 h-6 ${color.dot} rounded-full border-4 border-zinc-900 shadow-lg`}></div>

@@ -30,7 +30,6 @@ const Proyectos = () => {
         return () => observer.disconnect();
     }, []);
 
-    // Prevent body scroll when project modal is open
     useEffect(() => {
         if (selectedProject) {
             document.body.style.overflow = 'hidden';
@@ -46,20 +45,20 @@ const Proyectos = () => {
         <section id="proyectos" className='min-h-screen flex items-center justify-center px-6 relative overflow-hidden py-24 bg-zinc-950' ref={sectionRef}>
 
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-2s' }}></div>
+                <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-accent/10 rounded-full blur-3xl animate-float"></div>
+                <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-2s' }}></div>
             </div>
 
             <div className='max-w-7xl mx-auto w-full relative z-10'>
 
                 <div className={`text-center space-y-6 mb-20 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
                     <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-zinc-900/80 border border-zinc-700/50 rounded-full backdrop-blur-sm shadow-lg shadow-black/20">
-                        <Code2 size={18} className="text-emerald-400" />
-                        <span className="text-emerald-400 text-sm font-semibold tracking-wide">Mi Trabajo</span>
+                        <Code2 size={18} className="text-cyan-accent" />
+                        <span className="text-cyan-accent text-sm font-semibold tracking-wide">Mi Trabajo</span>
                     </div>
 
                     <h2 className='text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight'>
-                        Proyectos <span className="bg-linear-to-r from-emerald-400 via-teal-500 to-emerald-600 bg-clip-text text-transparent">Destacados</span>
+                        Proyectos <span className="bg-linear-to-r from-cyan-accent via-cyan-accent to-navy-light bg-clip-text text-transparent">Destacados</span>
                     </h2>
 
                     <p className='text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed'>
@@ -83,7 +82,7 @@ const Proyectos = () => {
                             >
                                 <div className={`absolute -inset-1 bg-linear-to-r ${colors.glow} rounded-3xl blur-lg opacity-0 group-hover:opacity-40 transition-all duration-700`} />
 
-                                <div className={`relative flex flex-col h-full bg-zinc-900/60 backdrop-blur-xl border border-zinc-800/80 group-hover:${colors.border} rounded-3xl overflow-hidden group-hover:-tranzinc-y-2 transition-all duration-500 hover:shadow-2xl ${colors.shadow}`}>
+                                <div className={`relative flex flex-col h-full bg-zinc-900/60 backdrop-blur-xl border border-zinc-800/80 group-hover:${colors.border} rounded-3xl overflow-hidden group-hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl ${colors.shadow}`}>
 
                                     <div className="relative h-64 overflow-hidden bg-zinc-950">
                                         <div className="absolute inset-0 bg-linear-to-t from-zinc-900 via-transparent to-transparent z-10 pointer-events-none"></div>
@@ -93,7 +92,7 @@ const Proyectos = () => {
                                             pagination={{
                                                 clickable: true,
                                                 bulletClass: 'swiper-pagination-bullet !bg-zinc-600',
-                                                bulletActiveClass: 'swiper-pagination-bullet-active !bg-emerald-400'
+                                                bulletActiveClass: 'swiper-pagination-bullet-active !bg-cyan-accent'
                                             }}
                                             autoplay={{ delay: 3500, disableOnInteraction: false }}
                                             spaceBetween={0}
@@ -119,16 +118,16 @@ const Proyectos = () => {
                                         </Swiper>
                                     </div>
 
-                                    <div className="p-8 flex flex-col flex-grow">
-                                        <h3 className={`text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:to-teal-500 transition-all duration-300`}>
+                                    <div className="p-8 flex flex-col grow">
+                                        <h3 className={`text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-cyan-accent group-hover:to-cyan-accent transition-all duration-300`}>
                                             {proyecto.titulo}
                                         </h3>
 
-                                        <p className="text-zinc-400 text-sm line-clamp-3 mb-6 flex-grow">
+                                        <p className="text-zinc-400 text-sm line-clamp-3 mb-6 grow">
                                             {proyecto.descripcion}
                                         </p>
 
-                                        <div className="flex items-center gap-2 text-sm font-semibold text-zinc-500 group-hover:text-emerald-400 transition-colors duration-300 mt-auto">
+                                        <div className="flex items-center gap-2 text-sm font-semibold text-zinc-500 group-hover:text-cyan-accent transition-colors duration-300 mt-auto">
                                             <span>Ver detalles del proyecto</span>
                                             <ExternalLink size={16} />
                                         </div>
@@ -143,7 +142,7 @@ const Proyectos = () => {
             {/* Project Details Modal */}
             {selectedProject && (
                 <div
-                    className="fixed inset-0 z-[1000] flex items-center justify-center bg-zinc-950/90 backdrop-blur-md p-4 animate-fade-in"
+                    className="fixed inset-0 z-1000 flex items-center justify-center bg-zinc-950/90 backdrop-blur-md p-4 animate-fade-in"
                     onClick={() => setSelectedProject(null)}
                 >
                     {data.proyectos
@@ -159,13 +158,13 @@ const Proyectos = () => {
                                 >
                                     <button
                                         onClick={() => setSelectedProject(null)}
-                                        className="absolute top-4 right-4 z-50 p-2 rounded-full bg-zinc-800/80 border border-zinc-700 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all duration-300 group"
+                                        className="absolute top-4 right-4 z-50 p-2 rounded-full bg-zinc-800/80 border border-zinc-700 hover:border-cyan-accent/50 hover:bg-cyan-accent/10 transition-all duration-300 group"
                                     >
-                                        <X size={20} className="text-zinc-400 group-hover:text-emerald-400 group-hover:rotate-90 transition-all" />
+                                        <X size={20} className="text-zinc-400 group-hover:text-cyan-accent group-hover:rotate-90 transition-all" />
                                     </button>
 
                                     <div className="p-8 md:p-10">
-                                        <h3 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mb-6 pr-8">
+                                        <h3 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-cyan-accent to-cyan-accent bg-clip-text text-transparent mb-6 pr-8">
                                             {proyecto.titulo}
                                         </h3>
 
@@ -221,7 +220,7 @@ const Proyectos = () => {
                                                     href={proyecto.repositorio}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-zinc-800 border border-zinc-700 text-zinc-300 rounded-xl font-semibold transition-all duration-300 ${colors.button} hover:-tranzinc-y-1`}
+                                                    className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-zinc-800 border border-zinc-700 text-zinc-300 rounded-xl font-semibold transition-all duration-300 ${colors.button} hover:-translate-y-1`}
                                                 >
                                                     <Github size={20} />
                                                     <span>Ver Código Fuente</span>
@@ -231,7 +230,7 @@ const Proyectos = () => {
                                                     href={proyecto.demo}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-linear-to-r from-emerald-600 to-teal-600 text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/30 hover:-tranzinc-y-1`}
+                                                    className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-linear-to-r from-navy-light to-navy-light text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-accent/30 hover:-translate-y-1`}
                                                 >
                                                     <ExternalLink size={20} />
                                                     <span>Visitar Sitio Web</span>

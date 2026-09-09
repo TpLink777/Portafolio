@@ -43,7 +43,7 @@ const Seccion3 = () => {
                         </div>
 
                         <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight'>
-                            Timeline de mi <span className="bg-linear-to-r from-cyan-accent via-cyan-accent to-navy-light bg-clip-text text-transparent">aprendizaje</span>
+                            Timeline de mi <span className="gradient-text">aprendizaje</span>
                         </h2>
 
                         <p className='text-zinc-400 text-lg max-w-2xl mx-auto'>

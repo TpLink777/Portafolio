@@ -34,7 +34,7 @@ const Experiencia = () => {
 
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                     Experiencia{" "}
-                    <span className="bg-linear-to-r from-cyan-accent via-cyan-accent to-navy-light bg-clip-text text-transparent">
+                    <span className="gradient-text">
                         En Proyectos
                     </span>
                 </h2>

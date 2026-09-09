@@ -45,7 +45,7 @@ const Seccion1 = () => {
                             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight'>
                                 Hola, esto te podría
                                 <br />
-                                <span className="bg-linear-to-r from-cyan-accent via-cyan-accent to-navy-light bg-clip-text text-transparent">
+                                <span className="gradient-text">
                                     interesar sobre mí!
                                 </span>
                             </h1>

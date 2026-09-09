@@ -51,7 +51,7 @@ const DownloadModal = ({ onClose }) => {
                         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-accent/20 to-cyan-accent/20 border border-cyan-accent/30 mb-4 shadow-lg shadow-cyan-accent/20">
                             <Download size={32} className="text-cyan-accent" />
                         </div>
-                        <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-accent via-cyan-accent to-navy-light bg-clip-text text-transparent mb-2">
+                        <h2 className="text-3xl font-bold gradient-text mb-2">
                             Descarga tu CV
                         </h2>
                         <p className="text-zinc-400 text-sm">

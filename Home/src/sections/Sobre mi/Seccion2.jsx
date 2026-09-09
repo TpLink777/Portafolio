@@ -43,7 +43,7 @@ const Seccion2 = () => {
                             </div>
 
                             <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white'>
-                                Objetivos & <span className="bg-linear-to-r from-cyan-accent via-cyan-accent to-navy-light bg-clip-text text-transparent">Metas</span>
+                                Objetivos & <span className="gradient-text">Metas</span>
                             </h2>
 
                             <p className='text-zinc-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed'>
@@ -53,7 +53,7 @@ const Seccion2 = () => {
 
                         <div className={`w-full max-w-5xl ${isVisible ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}>
                             <h3 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-12'>
-                                Algunas metas a <span className="bg-linear-to-r from-cyan-accent to-cyan-accent bg-clip-text text-transparent">corto plazo</span>
+                                Algunas metas a <span className="gradient-text">corto plazo</span>
                             </h3>
 
                             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8'>

@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     <div className="space-y-4 text-center md:text-left">
-                        <div className="text-3xl font-mono font-bold bg-linear-to-r from-cyan-accent to-cyan-accent bg-clip-text text-transparent inline-block">
+                        <div className="text-3xl font-mono font-bold gradient-text inline-block">
                             &lt;Dev /&gt;
                         </div>
                         <p className="text-zinc-400 max-w-sm mx-auto md:mx-0">

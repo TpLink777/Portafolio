@@ -60,7 +60,7 @@ const Inicio = () => {
                                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight animate-fade-in-up delay-100">
                                     Hola, soy
                                     <br />
-                                    <span className="bg-linear-to-r from-cyan-accent via-cyan-accent to-navy-light bg-clip-text text-transparent gradient-text-animated">
+                                    <span className="gradient-text-animated">
                                         Stiven Gomez
                                     </span>
                                 </h1>

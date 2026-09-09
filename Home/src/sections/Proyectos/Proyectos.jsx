@@ -58,7 +58,7 @@ const Proyectos = () => {
                     </div>
 
                     <h2 className='text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight'>
-                        Proyectos <span className="bg-linear-to-r from-cyan-accent via-cyan-accent to-navy-light bg-clip-text text-transparent">Destacados</span>
+                        Proyectos <span className="gradient-text">Destacados</span>
                     </h2>
 
                     <p className='text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed'>
@@ -164,7 +164,7 @@ const Proyectos = () => {
                                     </button>
 
                                     <div className="p-8 md:p-10">
-                                        <h3 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-cyan-accent to-cyan-accent bg-clip-text text-transparent mb-6 pr-8">
+                                        <h3 className="text-3xl md:text-4xl font-bold gradient-text mb-6 pr-8">
                                             {proyecto.titulo}
                                         </h3>
 

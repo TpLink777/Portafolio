@@ -1,6 +1,21 @@
 @import "tailwindcss";
 
-/* ===== Color System ===== */
+/* ========================================
+   Color System
+   ======================================== */
+
+@theme {
+    --color-navy-deep: #0B132B;
+    --color-navy-mid: #1C2541;
+    --color-navy-light: #3A506B;
+    --color-cyan-accent: #5BC0BE;
+    --color-cyan-bright: #6FFFE9;
+}
+
+/* ========================================
+   CSS Variables
+   ======================================== */
+
 :root {
     --navy-deep: #0B132B;
     --navy-mid: #1C2541;
@@ -9,47 +24,62 @@
     --cyan-bright: #6FFFE9;
 }
 
-/* ===== Typography ===== */
-body {
-    font-family: "Inter", system-ui, -apple-system, sans-serif;
-    background-color: var(--navy-deep);
-    color: #e4e4e7;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+/* ========================================
+   Base
+   ======================================== */
 
 html {
     scroll-behavior: smooth;
 }
 
-.font-mono {
-    font-family: "Fira Code", monospace;
+body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--navy-deep);
+    color: #e4e4e7;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== Custom Scrollbar ===== */
+/* ========================================
+   Typography
+   ======================================== */
+
+.font-mono {
+    font-family: "Fira Code", "Courier New", monospace;
+}
+
+/* ========================================
+   Custom Scrollbar
+   ======================================== */
+
 ::-webkit-scrollbar {
     width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #0B132B;
+    background: var(--navy-deep);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #27272a; /* zinc-800 */
+    background: #27272a;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #5BC0BE; /* color4 */
+    background: var(--cyan-accent);
 }
 
-/* ===== Keyframe Animations ===== */
+/* ========================================
+   Keyframe Animations
+   ======================================== */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -61,6 +91,7 @@ html {
         opacity: 0;
         transform: translateX(-40px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -72,6 +103,7 @@ html {
         opacity: 0;
         transform: translateX(40px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -82,28 +114,34 @@ html {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
     }
+
     33% {
         transform: translateY(-15px) rotate(1deg);
     }
+
     66% {
         transform: translateY(8px) rotate(-1deg);
     }
 }
 
 @keyframes pulse-glow {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 0.1;
         transform: scale(1);
     }
+
     50% {
         opacity: 0.3;
         transform: scale(1.05);
@@ -111,9 +149,11 @@ html {
 }
 
 @keyframes typing-cursor {
-    0%, 100% {
-        border-color: #5BC0BE; /* color4 */
+    0%,
+    100% {
+        border-color: var(--cyan-accent);
     }
+
     50% {
         border-color: transparent;
     }
@@ -124,6 +164,7 @@ html {
         opacity: 0;
         transform: scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -135,13 +176,28 @@ html {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* ===== Animation Utility Classes ===== */
+@keyframes gradient-shift {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* ========================================
+   Animation Utility Classes
+   ======================================== */
+
 .animate-fade-in-up {
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
@@ -180,92 +236,266 @@ html {
     animation: pulse-glow 4s ease-in-out infinite;
 }
 
-/* Staggered Animation Delays */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
-.delay-600 { animation-delay: 0.6s; }
-.delay-700 { animation-delay: 0.7s; }
-.delay-800 { animation-delay: 0.8s; }
-.delay-900 { animation-delay: 0.9s; }
-.delay-1000 { animation-delay: 1.0s; }
+.gradient-text-animated {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+}
 
-/* ===== Glass Effect Cleaned ===== */
-/* Removing heavy blur effects for a sharper, terminal-like feel */
+/* ========================================
+   Staggered Animation Delays
+   ======================================== */
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
+}
+
+.delay-700 {
+    animation-delay: 0.7s;
+}
+
+.delay-800 {
+    animation-delay: 0.8s;
+}
+
+.delay-900 {
+    animation-delay: 0.9s;
+}
+
+.delay-1000 {
+    animation-delay: 1s;
+}
+
+/* ========================================
+   Glass Effect
+   ======================================== */
+
 .glass {
     background: rgba(11, 19, 43, 0.8);
     border: 1px solid rgba(39, 39, 42, 0.5);
 }
 
-/* ===== Typing Cursor ===== */
+/* ========================================
+   Typing Cursor
+   ======================================== */
+
 .typing-cursor::after {
     content: "_";
     animation: typing-cursor 1s step-end infinite;
-    color: #5BC0BE;
+    color: var(--cyan-accent);
     font-weight: 700;
     margin-left: 2px;
 }
 
-/* ===== Terminal Text Selection ===== */
+/* ========================================
+   Text Selection
+   ======================================== */
+
 ::selection {
-    background: #5BC0BE;
-    color: #0B132B;
+    background: var(--cyan-accent);
+    color: var(--navy-deep);
 }
 
-/* ===== Custom Color System Classes ===== */
+/* ========================================
+   Custom Utility Classes
+   ======================================== */
+
 /* Text colors */
-.text-cyan-accent { color: var(--cyan-accent); }
-.text-navy-light { color: var(--navy-light); }
+
+.text-cyan-accent {
+    color: var(--cyan-accent);
+}
+
+.text-navy-light {
+    color: var(--navy-light);
+}
 
 /* Background colors */
-.bg-cyan-accent { background-color: var(--cyan-accent); }
-.bg-navy-light { background-color: var(--navy-light); }
 
-/* Opacity backgrounds */
-.bg-cyan-accent\/5 { background-color: rgba(91, 192, 190, 0.05); }
-.bg-cyan-accent\/10 { background-color: rgba(91, 192, 190, 0.1); }
-.bg-cyan-accent\/20 { background-color: rgba(91, 192, 190, 0.2); }
-.bg-cyan-accent\/30 { background-color: rgba(91, 192, 190, 0.3); }
-.bg-cyan-accent\/40 { background-color: rgba(91, 192, 190, 0.4); }
-.bg-cyan-accent\/50 { background-color: rgba(91, 192, 190, 0.5); }
-.bg-cyan-accent\/60 { background-color: rgba(91, 192, 190, 0.6); }
-.bg-cyan-accent\/80 { background-color: rgba(91, 192, 190, 0.8); }
-.bg-navy-light\/50 { background-color: rgba(58, 80, 107, 0.5); }
+.bg-cyan-accent {
+    background-color: var(--cyan-accent);
+}
 
-/* Border colors */
-.border-cyan-accent\/20 { border-color: rgba(91, 192, 190, 0.2); }
-.border-cyan-accent\/30 { border-color: rgba(91, 192, 190, 0.3); }
-.border-cyan-accent\/40 { border-color: rgba(91, 192, 190, 0.4); }
-.border-cyan-accent\/50 { border-color: rgba(91, 192, 190, 0.5); }
-.border-cyan-accent\/60 { border-color: rgba(91, 192, 190, 0.6); }
+.bg-navy-light {
+    background-color: var(--navy-light);
+}
 
-/* Hover states */
-.hover\:text-cyan-accent:hover { color: var(--cyan-accent); }
-.hover\:bg-cyan-accent\/10:hover { background-color: rgba(91, 192, 190, 0.1); }
-.hover\:bg-cyan-accent\/20:hover { background-color: rgba(91, 192, 190, 0.2); }
-.hover\:bg-cyan-accent\/50:hover { background-color: rgba(91, 192, 190, 0.5); }
-.hover\:border-cyan-accent\/30:hover { border-color: rgba(91, 192, 190, 0.3); }
-.hover\:border-cyan-accent\/50:hover { border-color: rgba(91, 192, 190, 0.5); }
-.hover\:border-cyan-accent\/60:hover { border-color: rgba(91, 192, 190, 0.6); }
+/* ========================================
+   Background Opacity
+   ======================================== */
 
-/* Gradient colors */
-.from-cyan-accent { --tw-gradient-from: rgba(91,192,190,1); }
-.from-cyan-accent\/10 { --tw-gradient-from: rgba(91,192,190,0.1); }
-.from-cyan-accent\/50 { --tw-gradient-from: rgba(91,192,190,0.5); }
-.via-cyan-accent { --tw-gradient-to: rgba(91,192,190,1); }
-.via-cyan-accent\/50 { --tw-gradient-to: rgba(91,192,190,0.5); }
-.to-cyan-accent { --tw-gradient-to: rgba(91,192,190,1); }
-.to-cyan-accent\/50 { --tw-gradient-to: rgba(91,192,190,0.5); }
-.to-navy-light { --tw-gradient-to: #3A506B; }
-.to-navy-light\/10 { --tw-gradient-to: rgba(58,80,107,0.1); }
-.from-navy-light { --tw-gradient-from: #3A506B; }
+.bg-cyan-accent\/5 {
+    background-color: rgba(91, 192, 190, 0.05);
+}
 
-/* Shadow colors */
-.shadow-cyan-accent\/10 { --tw-shadow-color: rgba(91, 192, 190, 0.1); }
-.shadow-cyan-accent\/20 { --tw-shadow-color: rgba(91, 192, 190, 0.2); }
-.shadow-cyan-accent\/25 { --tw-shadow-color: rgba(91, 192, 190, 0.25); }
-.shadow-cyan-accent\/30 { --tw-shadow-color: rgba(91, 192, 190, 0.3); }
-.shadow-cyan-accent\/40 { --tw-shadow-color: rgba(91, 192, 190, 0.4); }
-.shadow-cyan-accent\/50 { --tw-shadow-color: rgba(91, 192, 190, 0.5); }
+.bg-cyan-accent\/10 {
+    background-color: rgba(91, 192, 190, 0.1);
+}
+
+.bg-cyan-accent\/20 {
+    background-color: rgba(91, 192, 190, 0.2);
+}
+
+.bg-cyan-accent\/30 {
+    background-color: rgba(91, 192, 190, 0.3);
+}
+
+.bg-cyan-accent\/40 {
+    background-color: rgba(91, 192, 190, 0.4);
+}
+
+.bg-cyan-accent\/50 {
+    background-color: rgba(91, 192, 190, 0.5);
+}
+
+.bg-cyan-accent\/60 {
+    background-color: rgba(91, 192, 190, 0.6);
+}
+
+.bg-cyan-accent\/80 {
+    background-color: rgba(91, 192, 190, 0.8);
+}
+
+.bg-navy-light\/50 {
+    background-color: rgba(58, 80, 107, 0.5);
+}
+
+/* ========================================
+   Border Colors
+   ======================================== */
+
+.border-cyan-accent\/20 {
+    border-color: rgba(91, 192, 190, 0.2);
+}
+
+.border-cyan-accent\/30 {
+    border-color: rgba(91, 192, 190, 0.3);
+}
+
+.border-cyan-accent\/40 {
+    border-color: rgba(91, 192, 190, 0.4);
+}
+
+.border-cyan-accent\/50 {
+    border-color: rgba(91, 192, 190, 0.5);
+}
+
+.border-cyan-accent\/60 {
+    border-color: rgba(91, 192, 190, 0.6);
+}
+
+/* ========================================
+   Hover States
+   ======================================== */
+
+.hover\:text-cyan-accent:hover {
+    color: var(--cyan-accent);
+}
+
+.hover\:bg-cyan-accent\/10:hover {
+    background-color: rgba(91, 192, 190, 0.1);
+}
+
+.hover\:bg-cyan-accent\/20:hover {
+    background-color: rgba(91, 192, 190, 0.2);
+}
+
+.hover\:bg-cyan-accent\/50:hover {
+    background-color: rgba(91, 192, 190, 0.5);
+}
+
+.hover\:border-cyan-accent\/30:hover {
+    border-color: rgba(91, 192, 190, 0.3);
+}
+
+.hover\:border-cyan-accent\/50:hover {
+    border-color: rgba(91, 192, 190, 0.5);
+}
+
+.hover\:border-cyan-accent\/60:hover {
+    border-color: rgba(91, 192, 190, 0.6);
+}
+
+/* ========================================
+   Gradient Text
+   ======================================== */
+
+.gradient-text {
+    background-image: linear-gradient(
+        to right,
+        var(--cyan-accent),
+        var(--cyan-bright),
+        #38bdf8
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-animated {
+    background-image: linear-gradient(
+        90deg,
+        var(--cyan-accent),
+        var(--cyan-bright),
+        #38bdf8,
+        var(--cyan-accent)
+    );
+
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradient-shift 3s ease infinite;
+}
+
+/* ========================================
+   Shadow Colors
+   ======================================== */
+
+.shadow-cyan-accent\/10 {
+    --tw-shadow-color: rgba(91, 192, 190, 0.1);
+}
+
+.shadow-cyan-accent\/20 {
+    --tw-shadow-color: rgba(91, 192, 190, 0.2);
+}
+
+.shadow-cyan-accent\/25 {
+    --tw-shadow-color: rgba(91, 192, 190, 0.25);
+}
+
+.shadow-cyan-accent\/30 {
+    --tw-shadow-color: rgba(91, 192, 190, 0.3);
+}
+
+.shadow-cyan-accent\/40 {
+    --tw-shadow-color: rgba(91, 192, 190, 0.4);
+}
+
+.shadow-cyan-accent\/50 {
+    --tw-shadow-color: rgba(91, 192, 190, 0.5);
+}
+
